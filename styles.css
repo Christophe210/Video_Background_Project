@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Alkatra&family=Roboto:wght@400;500&family=Sedgwick+Ave+Display&display=swap");
+
+:root {
+  --primary-color: #0ea5e9;
+  --primary-color-dark: #0284c7;
+  --text-light: #f3f4f6;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  position: relative;
+  padding: 0 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+nav {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 2rem 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .logo {
+  color: var(--text-light);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+nav ul {
+  display: flex;
+  gap: 3rem;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: var(--primary-color-dark);
+}
+
+.content {
+  text-align: center;
+  color: var(--text-light);
+}
+
+.content h1 {
+  font-family: "Sedgwick Ave Display", cursive;
+  font-size: 7rem;
+}
+
+.content h1 span {
+  font-size: 5rem;
+}
+
+.content p {
+  font-family: "Alkatra", cursive;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.content .promo {
+  padding: 0.5rem;
+  width: 300px;
+  margin: auto;
+  border-radius: 2rem;
+  font-size: 1.2rem;
+  font-family: "Alkatra", cursive;
+  background-color: var(--primary-color);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.content .promo:hover {
+  background-color: var(--primary-color-dark);
+}
+
+.bg__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .bg__video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .bg__video {
+    width: auto;
+    height: 100%;
+  }
+}
